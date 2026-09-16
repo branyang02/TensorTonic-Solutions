@@ -5,5 +5,6 @@ def relu(x) -> np.ndarray:
     Returns a NumPy array with the same shape as x.
     """
     # Write code here
-    arr = np.asarray(x, dtype="float")
-    return np.asarray(np.maximum(arr, 0.0), dtype="float")
+    x = np.asarray(x, dtype="float")
+    x = np.where(x > 0, x, 0.0)
+    return x
